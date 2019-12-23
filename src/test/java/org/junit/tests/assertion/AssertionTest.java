@@ -5,6 +5,7 @@ import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertGreaterThan;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertNull;
@@ -648,4 +649,19 @@ public class AssertionTest {
     public void assertNotEqualsIgnoresFloatDeltaOnNaN() {
         assertNotEquals(Float.NaN, Float.NaN, 1f);
     }
+    
+    @Test
+    public void greaterThan() {
+        assertGreaterThan(3, 1, new java.util.Comparator<Integer>() {
+            public int compare(Integer n1, Integer n2) {
+                if (n1 > n2)
+                    return 1;
+                else if (n1 == n2)
+                    return 0;
+                else 
+                    return -1;
+                
+        }
+    });
+}
 }
