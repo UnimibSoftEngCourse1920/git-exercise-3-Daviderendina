@@ -1015,4 +1015,19 @@ public class AssertionTest {
             }
         });
     }
+    
+    @Test
+    public void greaterThan() {
+        assertGreaterThan(3, 1, new java.util.Comparator<Integer>() {
+            public int compare(Integer n1, Integer n2) {
+                if (n1 > n2)
+                    return 1;
+                else if (n1 == n2)
+                    return 0;
+                else 
+                    return -1;
+                
+            }
+        });
+    }
 }

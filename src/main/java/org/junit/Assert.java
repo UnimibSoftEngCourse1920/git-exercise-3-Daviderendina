@@ -1033,5 +1033,26 @@ public class Assert {
 
     public static <T> void assertGreaterThan(T o1, T o2, java.util.Comparator comparator) {
         assertTrue(comparator.compare(o1,o2) > 0);
+    
+    public static void assertGreaterThan(int n1, int n2, java.util.Comparator<Integer> comp) {
+        assertTrue(comp.compare(n1,  n2) > 0);
+    }
+    public static void assertGreaterThan(byte n1, byte n2, java.util.Comparator<Byte> comp) {
+        assertTrue(comp.compare(n1,  n2) > 0);
+    }
+    public static void assertGreaterThan(short n1, short n2, java.util.Comparator<Short> comp) {
+        assertTrue(comp.compare(n1,  n2) > 0);
+    }
+    public static void assertGreaterThan(long n1, long n2, java.util.Comparator<Long> comp) {
+        assertTrue(comp.compare(n1,  n2) > 0);
+    }
+    public static void assertGreaterThan(float n1, float n2, java.util.Comparator<Float> comp) {
+        assertTrue(comp.compare(n1,  n2) > 0);
+    }
+    public static void assertGreaterThan(double n1, double n2, java.util.Comparator<Double> comp) {
+        assertTrue(comp.compare(n1,  n2) > 0);
+    }
+    public static void assertGreaterThan(char c1, char c2, java.util.Comparator<Character> comp) {
+        assertTrue(comp.compare(c1,  c2) > 0);
     }
 }
